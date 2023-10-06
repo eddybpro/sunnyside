@@ -60,5 +60,11 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 2rem;
+    min-height: 90vh;
+  }
+
+  .Title {
+    font-size: 6.5rem;
+    line-height: 7.5rem;
   }
 }
