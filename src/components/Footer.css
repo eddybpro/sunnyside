@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 100%);
+  --color-brand-2: hsl(212, 27%, 19%);
+  --color-brand-3: hsl(213, 9%, 39%);
+  --color-brand-4: hsl(232, 10%, 55%);
+  --color-brand-5: hsl(210, 4%, 67%);
+  --color-brand-6: hsl(167, 40%, 24%);
+  --color-brand-7: hsl(198, 62%, 26%);
+
+  --color-site-1: hsl(7, 99%, 70%);
+  --color-site-2: hsl(51, 100%, 49%);
+  --color-site-3: hsl(168, 34%, 41%);
+
+  --font-barlow: "Barlow", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: var(--color-site-3);
+}
+
+.FooterLogo {
+  display: inline-block;
+  width: 15rem;
+  margin-bottom: 2rem;
+  filter: invert(69%) sepia(19%) saturate(1100%) hue-rotate(118deg)
+    brightness(80%) contrast(80%);
+}
+
+.FooterLogo > img {
+  width: 100%;
+}
+
+.FooterLinksBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2.5rem;
+}
+
+.FooterLinksBox > li > a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: var(--font-barlow);
+  text-transform: capitalize;
+  color: var(--color-brand-6);
+  transition: color 0.2s ease-in-out;
+}
+
+.FooterLinksBox > li > a:hover {
+  color: var(--color-brand-1);
+}
+
+.FooterSocialIconsBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem 0 0;
+}
+
+.socialIcon {
+  font-size: 3rem;
+  color: var(--color-brand-6);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.socialIcon:hover {
+  color: var(--color-brand-1);
+}
+
+@media screen and (min-width: 768px) {
+  .FooterLinksBox {
+    justify-content: center;
+    gap: 4rem;
+  }
+}

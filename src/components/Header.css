@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 100%);
+  --color-brand-2: hsl(212, 27%, 19%);
+  --color-brand-3: hsl(213, 9%, 39%);
+  --color-brand-4: hsl(232, 10%, 55%);
+  --color-brand-5: hsl(210, 4%, 67%);
+  --color-brand-6: hsl(167, 40%, 24%);
+  --color-brand-7: hsl(198, 62%, 26%);
+
+  --color-site-1: hsl(7, 99%, 70%);
+  --color-site-2: hsl(51, 100%, 49%);
+  --color-site-3: hsl(168, 34%, 41%);
+
+  --font-barlow: "Barlow", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  background: url("../assets/mobile/image-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem 2rem 12rem;
+  text-align: center;
+}
+
+.Title {
+  font-size: 4.5rem;
+  font-family: var(--font-fraunces);
+  letter-spacing: 3px;
+  line-height: 6.5rem;
+  text-transform: uppercase;
+  color: var(--color-brand-1);
+  margin-bottom: 2.5rem;
+}
+
+.ArrowIcon {
+  width: 4rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background: url("../assets/desktop/image-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+  }
+}

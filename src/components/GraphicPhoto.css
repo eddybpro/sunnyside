@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 100%);
+  --color-brand-2: hsl(212, 27%, 19%);
+  --color-brand-3: hsl(213, 9%, 39%);
+  --color-brand-4: hsl(232, 10%, 55%);
+  --color-brand-5: hsl(210, 4%, 67%);
+  --color-brand-6: hsl(167, 40%, 24%);
+  --color-brand-7: hsl(198, 62%, 26%);
+
+  --color-site-1: hsl(7, 99%, 70%);
+  --color-site-2: hsl(51, 100%, 49%);
+  --color-site-3: hsl(168, 34%, 41%);
+
+  --font-barlow: "Barlow", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.GraphicPhotoContainer-GraphicBox,
+.GraphicPhotoContainer-PhotoBox {
+  position: relative;
+}
+
+.GraphicPhotoContainer-GraphicBox-ImgBox,
+.GraphicPhotoContainer-PhotoBox-ImgBox {
+  width: 100%;
+}
+
+.GraphicPhotoContainer-GraphicBox-ImgBox > picture > img,
+.GraphicPhotoContainer-PhotoBox-ImgBox > picture > img {
+  width: 100%;
+  height: 100%;
+}
+
+.GraphicPhotoContainer-GraphicBox-TxtBox,
+.GraphicPhotoContainer-PhotoBox-TxtBox {
+  text-align: center;
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.GraphicPhotoContainer-GraphicBox-TxtBox-Title,
+.GraphicPhotoContainer-PhotoBox-TxtBox-Title {
+  font-family: var(--font-fraunces);
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.GraphicPhotoContainer-GraphicBox-TxtBox-Title,
+.GraphicPhotoContainer-GraphicBox-TxtBox-Para {
+  color: var(--color-brand-6);
+}
+
+.GraphicPhotoContainer-PhotoBox-TxtBox-Title,
+.GraphicPhotoContainer-PhotoBox-TxtBox-Para {
+  color: var(--color-brand-7);
+}
+
+.GraphicPhotoContainer-GraphicBox-TxtBox-Para,
+.GraphicPhotoContainer-PhotoBox-TxtBox-Para {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-family: var(--font-barlow);
+}
+
+@media screen and (min-width: 768px) {
+  .GraphicPhotoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .GraphicPhotoContainer-PhotoBox-TxtBox,
+  .GraphicPhotoContainer-GraphicBox-TxtBox {
+    padding: 0 8%;
+  }
+}

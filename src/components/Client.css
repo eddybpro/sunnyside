@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 100%);
+  --color-brand-2: hsl(212, 27%, 19%);
+  --color-brand-3: hsl(213, 9%, 39%);
+  --color-brand-4: hsl(232, 10%, 55%);
+  --color-brand-5: hsl(210, 4%, 67%);
+  --color-brand-6: hsl(167, 40%, 24%);
+  --color-brand-7: hsl(198, 62%, 26%);
+
+  --color-site-1: hsl(7, 99%, 70%);
+  --color-site-2: hsl(51, 100%, 49%);
+  --color-site-3: hsl(168, 34%, 41%);
+
+  --font-barlow: "Barlow", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.ClientContainer-ClientImg {
+  display: block;
+  width: 8rem;
+  margin: 3rem auto;
+  border-radius: 50%;
+}
+
+.ClientContainer-ClientReview {
+  font-size: 1.6rem;
+  font-family: var(--font-barlow);
+  color: var(--color-brand-3);
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.ClientContainer-ClientName {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: var(--color-brand-2);
+  font-family: var(--font-fraunces);
+  margin-bottom: 2rem;
+}
+
+.ClientContainer-ClientJob {
+  font-size: 1.6rem;
+  font-family: var(--font-barlow);
+  color: var(--color-brand-5);
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 100%);
+  --color-brand-2: hsl(212, 27%, 19%);
+  --color-brand-3: hsl(213, 9%, 39%);
+  --color-brand-4: hsl(232, 10%, 55%);
+  --color-brand-5: hsl(210, 4%, 67%);
+  --color-brand-6: hsl(167, 40%, 24%);
+  --color-brand-7: hsl(198, 62%, 26%);
+
+  --color-site-1: hsl(7, 99%, 70%);
+  --color-site-2: hsl(51, 100%, 49%);
+  --color-site-3: hsl(168, 34%, 41%);
+
+  --font-barlow: "Barlow", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.AudienceContainer-ImgBox {
+  width: 100%;
+}
+
+.AudienceContainer-ImgBox > picture > img {
+  width: 100%;
+  height: 100%;
+}
+
+.AudienceContainer-TxtBox {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.AudienceContainer-TxtBox-Title {
+  font-size: 3.5rem;
+  color: var(--color-brand-2);
+  font-family: var(--font-fraunces);
+  margin-bottom: 1.5rem;
+}
+
+.AudienceContainer-TxtBox-Para {
+  font-size: 1.6rem;
+  font-family: var(--font-barlow);
+  line-height: 2.5rem;
+  color: var(--color-brand-3);
+  margin-bottom: 2.5rem;
+}
+
+.AudienceContainer-TxtBox-Btn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  font-family: var(--font-fraunces);
+  text-transform: uppercase;
+  border-bottom: 0.5rem solid var(--color-site-1);
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .AudienceContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .AudienceContainer-TxtBox {
+    text-align: left;
+    padding: 10% 20%;
+  }
+}

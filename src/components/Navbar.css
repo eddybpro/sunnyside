@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 100%);
+  --color-brand-2: hsl(212, 27%, 19%);
+  --color-brand-3: hsl(213, 9%, 39%);
+  --color-brand-4: hsl(232, 10%, 55%);
+  --color-brand-5: hsl(210, 4%, 67%);
+  --color-brand-6: hsl(167, 40%, 24%);
+  --color-brand-7: hsl(198, 62%, 26%);
+
+  --color-site-1: hsl(7, 99%, 70%);
+  --color-site-2: hsl(51, 100%, 49%);
+  --color-site-3: hsl(168, 34%, 41%);
+  --color-site-4: hsla(0, 0%, 100%, 0.3);
+
+  --font-barlow: "Barlow", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  display: block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.Logo {
+  display: block;
+  width: 8rem;
+}
+
+.Logo > img {
+  width: 100%;
+}
+
+.Menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.NavLinks {
+  display: none;
+}
+
+.NavLinks.open {
+  display: block;
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  right: 0;
+  background-color: var(--color-brand-1);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.NavLinks.open::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  border-bottom: 2.5rem solid var(--color-brand-1);
+  border-left: 2.5rem solid transparent;
+  border-right: 0 solid transparent;
+}
+
+.NavLinks-Link {
+  margin-bottom: 3.5rem;
+}
+
+.NavLinks-Link > a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--color-brand-3);
+  font-family: var(--font-barlow);
+  text-transform: capitalize;
+}
+
+.NavLinks-Link.contact {
+  display: block;
+  margin: 2.5rem auto;
+  width: 15rem;
+  background-color: var(--color-site-2);
+  padding: 1.5rem 3rem;
+  border-radius: 2.5rem;
+}
+
+.NavLinks-Link.contact > a {
+  color: var(--color-brand-2);
+  text-transform: uppercase;
+  font-family: var(--font-fraunces);
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .Logo {
+    width: 12rem;
+  }
+
+  .Menu,
+  .NavLinks.open::after {
+    display: none;
+  }
+
+  .NavLinks,
+  .NavLinks.open {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .NavLinks-Link {
+    margin-bottom: 0;
+  }
+
+  .NavLinks-Link > a {
+    color: var(--color-brand-1);
+  }
+
+  .NavLinks-Link.contact {
+    background-color: var(--color-brand-1);
+    color: var(--color-brand-2);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .NavLinks-Link.contact:hover > a {
+    color: var(--color-brand-1);
+  }
+
+  .NavLinks-Link.contact:hover {
+    background-color: var(--color-site-4);
+  }
+}
